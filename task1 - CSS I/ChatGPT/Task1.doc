@@ -1,0 +1,80 @@
+### CSS Basics
+
+**CSS** stands for **Cascading Style Sheets**. It is a stylesheet language used to control the presentation of HTML documents. CSS allows developers to style elements on a web page by defining rules for layout, design, colors, fonts, spacing, and more. It separates the content (HTML) from the design (CSS), making it easier to maintain and update the appearance of web pages without altering the HTML structure.
+
+#### Role of CSS in Web Development:
+- **Styling**: CSS defines how HTML elements should look (e.g., background colors, text colors, font styles).
+- **Layout**: It controls the positioning and layout of elements, making websites responsive and visually appealing.
+- **Consistency**: CSS allows the same styles to be applied across multiple pages, ensuring a consistent look and feel.
+- **Responsive Design**: By using CSS media queries, developers can make websites adaptable to different screen sizes (mobile, tablet, desktop).
+
+### Example: HTML Document with Basic CSS
+
+#### HTML Code:
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Basics Example</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Welcome to My Website</h1>
+  <p>This is a simple HTML page styled using basic CSS rules.</p>
+</body>
+</html>
+```
+
+#### CSS Code (styles.css):
+```css
+/* Change the background color of the entire page */
+body {
+  background-color: lightblue;
+  color: darkblue;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+}
+
+/* Style for the heading */
+h1 {
+  color: white;
+  font-size: 2em;
+  text-align: center;
+}
+
+/* Style for the paragraph */
+p {
+  color: black;
+  font-size: 1.2em;
+  line-height: 1.5;
+  text-align: justify;
+}
+```
+
+### Explanation of CSS Code:
+
+1. **body**:
+   - `background-color: lightblue;`: Sets the background color of the entire webpage to light blue.
+   - `color: darkblue;`: Changes the default text color of the page to dark blue.
+   - `font-size: 16px;`: Sets the base font size for the page to 16 pixels.
+   - `font-family: Arial, sans-serif;`: Specifies the font family to use for text, prioritizing Arial, and falling back to a sans-serif font if Arial is unavailable.
+
+2. **h1**:
+   - `color: white;`: Changes the text color of the `<h1>` heading to white.
+   - `font-size: 2em;`: Sets the font size of the heading to 2 times the size of the body font (32px, since 1em = 16px).
+   - `text-align: center;`: Centers the heading text.
+
+3. **p**:
+   - `color: black;`: Changes the text color of paragraphs to black.
+   - `font-size: 1.2em;`: Sets the font size of the paragraph text to 1.2 times the size of the body font (19.2px).
+   - `line-height: 1.5;`: Increases the line spacing to make text easier to read.
+   - `text-align: justify;`: Justifies the text so that it is aligned evenly on both the left and right margins.
+
+### Output:
+- The web page will have a light blue background.
+- The main heading (`h1`) will appear in white and centered.
+- The text in the paragraph (`p`) will be black, with a slightly larger font size, and the text will be justified for better readability.
+
+This basic example demonstrates how CSS can be used to control the appearance and layout of HTML elements, making web pages visually appealing and easy to navigate.

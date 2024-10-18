@@ -1,0 +1,79 @@
+## Task 11: Table and `<div>`
+
+**Tables**
+
+- **Purpose:** Originally designed for tabular data presentation.
+- **Structure:** Organized into rows and columns.
+- **Layout:** Provides a structured grid for arranging content.
+- **CSS Styling:** Can be styled using CSS properties like `border`, `padding`, `margin`, and `text-align`.
+
+**`<div>` Elements**
+
+- **Purpose:** General-purpose container for grouping elements.
+- **Structure:** No inherent structure, can be nested within other elements.
+- **Layout:** Provides flexibility for arranging content using CSS properties like `display`, `float`, `position`, and `flexbox`.
+
+**When to Use Which:**
+
+- **Tables:** Use tables for presenting tabular data (e.g., data from a spreadsheet). Avoid using tables for complex layouts or non-tabular content.
+- **`<div>` Elements:** Use `<div>` elements for most layout scenarios, especially when creating flexible and responsive designs.
+
+**Example:**
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Table vs. Div</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .item {
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Table Layout</h2>
+    <table>
+        <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+        </tr>
+        <tr>
+            <td>Cell 1</td>
+            <td>Cell 2</td>
+        </tr>
+    </table>
+
+    <h2>Div Layout</h2>
+    <div class="container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+    </div>
+</body>
+</html>
+```
+
+**Explanation:**
+
+- The table layout uses `<table>`, `<tr>`, and `<td>` elements to create a structured grid.
+- The `div` layout uses a flex container and individual `<div>` elements to arrange content.
+
+In general, it's recommended to use `<div>` elements for most layout scenarios, as they offer more flexibility and are better suited for modern web design practices. However, tables can still be useful for presenting tabular data in a clear and organized manner.

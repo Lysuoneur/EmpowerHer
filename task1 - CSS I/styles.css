@@ -1,0 +1,206 @@
+
+body {
+    font-family: "Helvetica Neue", sans-serif;
+    background-color: lightblue;
+    color: darkblue; 
+    font-size: 18px;
+}
+
+/* Header Styles */
+div.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    font-family: 'Arial', sans-serif; 
+    font-size: 2.5rem;
+    color: black;
+    font-weight: bold; 
+    text-align: center; 
+}
+
+
+.logo {
+    width: 100px;
+}
+
+.logo img {
+    width: 100%;
+}
+
+/* Navigation Styles */
+.nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav li {
+    margin: 0 15px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+/* Main Content Styles */
+.main {
+    padding: 50px;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.hero img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Product Styles */
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.product {
+    width: 30%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.product img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+/* Footer Styles */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+/* Specific Heading Styles */
+div.h1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #d03333;
+    color: blue;
+    font-family: 'Arial', sans-serif; 
+    font-size: 2.5rem; 
+    font-weight: bold; 
+    text-align: center; 
+}
+
+/* Paragraph Styles */
+p {
+    font-family: 'Times New Roman', serif;
+    font-size: 1.2rem;
+    text-align: justify; 
+}
+
+/* Container Styles */
+div.container {
+    background-color: #4CAF50; 
+    color: white; 
+    padding: 20px; 
+    border-radius: 5px; 
+}
+
+/* Box Styles */
+.box {
+    width: 200px; 
+    padding: 20px; 
+    border: 5px solid black; 
+    margin: 10px; 
+    background-color: lightblue; 
+}
+
+/* Flexbox Styles */
+.flex-container {
+    display: flex; 
+    justify-content: space-around; 
+    padding: 20px;
+}
+
+.flex-item {
+    background-color: lightcoral; 
+    padding: 10px; 
+    border: 1px solid black; 
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 600px) {
+    body {
+        font-size: 14px; 
+    }
+}
+
+@media (max-width: 400px) {
+    body {
+        font-size: 12px; 
+    }
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #000;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: lightgray;
+}
+
+/* CSS Variables */
+:root {
+    --main-bg-color: lightblue; 
+    --main-text-color: darkblue;
+}
+
+body {
+    background-color: var(--main-bg-color); 
+    color: var(--main-text-color);
+}
+
+.content {
+    padding: 20px;
+    border: 1px solid var(--main-text-color);
+}
+
+/* Special Section Styles */
+.special {
+    --main-bg-color: lightgreen; 
+    background-color: var(--main-bg-color);
+}
+.external-style {
+    color: red;
+    font-size: 20px;
+}

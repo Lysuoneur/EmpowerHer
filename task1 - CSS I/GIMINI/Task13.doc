@@ -1,0 +1,53 @@
+## Task 13: CSS Variables
+
+**CSS Variables** (also known as **custom properties**) are a powerful feature introduced in CSS3 that allows you to define and reuse values throughout your stylesheet. They provide a way to centralize and manage styles, making it easier to maintain consistency and make global changes.
+
+**Syntax:**
+
+- To define a CSS variable, use the `--` prefix followed by the variable name.
+- To reference a variable, use the `var()` function.
+
+**Example:**
+
+```css
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --font-size: 16px;
+}
+
+body {
+    background-color: var(--primary-color);
+}
+
+h1 {
+    color: var(--secondary-color);
+    font-size: var(--font-size);
+}
+```
+
+**Explanation:**
+
+- The `:root` selector targets the root element of the HTML document, which is typically `<html>`.
+- The variables `--primary-color`, `--secondary-color`, and `--font-size` are defined with their respective values.
+- The `body` element's background color is set using the `var(--primary-color)` function, which references the previously defined variable.
+- The `h1` element's color and font size are also set using variables.
+
+**Benefits of Using CSS Variables:**
+
+- **Centralized Control:** Define values in one place and reuse them throughout your stylesheet.
+- **Improved Maintainability:** Easily update values in a single location to make global changes.
+- **Enhanced Consistency:** Maintain a consistent look and feel across your website.
+- **Theme Customization:** Create multiple themes by changing variable values.
+
+**Changing Variable Values:**
+
+To change the value of a CSS variable, you can simply redefine it in the stylesheet. This will update all elements that reference the variable.
+
+```css
+:root {
+    --primary-color: #ff0000; /* Change the primary color */
+}
+```
+
+By using CSS variables, you can create more flexible, maintainable, and customizable stylesheets. They are especially useful for creating themes or design systems.

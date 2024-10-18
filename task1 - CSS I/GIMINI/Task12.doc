@@ -1,0 +1,67 @@
+## Task 12: Flexbox
+
+**Flexbox** is a CSS layout model that provides a flexible way to arrange items within a container. It's particularly useful for creating responsive designs that adapt to different screen sizes.
+
+**Key Concepts:**
+
+- **Flex Container:** The parent element that contains flex items.
+- **Flex Items:** The child elements within the flex container.
+- **Flex Properties:** Properties that control the behavior of flex items within the container.
+
+**Flexbox Properties:**
+
+* **`display: flex;`:** Sets the container as a flex container.
+* **`flex-direction`:** Controls the direction of the flex items (row, row-reverse, column, column-reverse).
+* **`flex-wrap`:** Determines whether flex items wrap to the next line (wrap, nowrap).
+* **`justify-content`:** Aligns flex items along the main axis (start, end, center, space-between, space-around, space-evenly).
+* **`align-items`:** Aligns flex items along the cross axis (stretch, flex-start, flex-end, center, baseline).
+* **`align-content`:** Aligns flex lines within the flex container (stretch, flex-start, flex-end, center, space-between, space-around).
+
+**Example: Responsive Navbar**
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flexbox Navbar</title>
+    <style>
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+</body>
+</html>
+```
+
+**Explanation:**
+
+- The `.navbar` class sets the container as a flex container and aligns items horizontally and vertically.
+- The `justify-content: space-between` property distributes the items evenly with space between them.
+- The `align-items: center` property vertically centers the items.
+
+This navbar will adjust its layout to fit different screen sizes, ensuring a responsive and user-friendly experience.
+
+**Additional Flexbox Properties:**
+
+- **`flex-grow`:** Specifies how much an item should grow relative to other items.
+- **`flex-shrink`:** Specifies how much an item should shrink relative to other items.
+- **`flex-basis`:** Sets the initial size of an item before any growth or shrinking.
+
+By understanding and utilizing these properties, you can create flexible and responsive layouts using Flexbox.
