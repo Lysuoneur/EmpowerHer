@@ -1,6 +1,7 @@
-# Task 1: Create a Simple Web Page
+# Task 2: Multimedia Embedding
 ### Objective: 
-Practice the basic structure of an HTML5 document.
+Practice embedding multimedia elements using HTML5.
 
 ### Description: 
-Students have to create a webpage with a header, paragraph, list, and a link. Include a footer with some contact information.
+Students have to create a webpage that includes an image, a video, and audio.
+
