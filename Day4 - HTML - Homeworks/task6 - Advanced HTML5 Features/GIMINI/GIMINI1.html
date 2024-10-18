@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Theme Preference</title>
+    <style>
+        body {
+            background-color: #ffffff;
+        }
+
+        .theme-button {
+            padding: 10px;
+            background-color: #f0f0f0;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Theme Preference</h1>
+
+    <div class="theme-button" onclick="setTheme('blue')">Blue</div>
+    <div class="theme-button" onclick="setTheme('green')">Green</div>
+    <div class="theme-button" onclick="setTheme('red')">Red</div>
+
+    <script>
+        function setTheme(color) {
+            document.body.style.backgroundColor = color;
+            localStorage.setItem("themeColor", color);
+        }
+
+        // Load the saved theme color on page load
+        var savedTheme = localStorage.getItem("themeColor");
+        if (savedTheme) {
+            setTheme(savedTheme);
+        }
+    </script>
+</body>
+</html>

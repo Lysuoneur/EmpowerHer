@@ -1,0 +1,31 @@
+// Name of the cache
+const cacheName = 'offline-cache-v1';
+
+// Files to cache
+const cacheFiles = [
+    '/',
+    '/index.html',
+    '/styles.css', // If you have a stylesheet
+    '/app.js', // If you have a JS file
+];
+
+// Install event - cache the files
+self.addEventListener('install', (event) => {
+    event.waitUntil(
+        caches.open(cacheName)
+            .then((cache) => {
+                return cache.addAll(cacheFiles);
+            })
+    );
+});
+
+// Fetch event - serve cached content when offline
+self.addEventListener('fetch', (event) => {
+    event.respondWith(
+        caches.match(event.request)
+            .then((response) => {
+                // Return cached file or fetch from network
+                return response || fetch(event.request);
+            })
+    );
+});

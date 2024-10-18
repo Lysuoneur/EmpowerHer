@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Basic Shapes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        canvas {
+            border: 1px solid #000;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Drawing Basic Shapes with Canvas</h1>
+    <canvas id="myCanvas" width="500" height="400"></canvas>
+
+    <script>
+        const canvas = document.getElementById('myCanvas');
+        const ctx = canvas.getContext('2d');
+
+        // Draw a rectangle
+        ctx.fillStyle = "#FF5733"; // Orange color
+        ctx.fillRect(50, 50, 150, 100); // (x, y, width, height)
+
+        // Draw a circle
+        ctx.beginPath();
+        ctx.arc(350, 150, 50, 0, Math.PI * 2, false); // (x, y, radius, startAngle, endAngle)
+        ctx.fillStyle = "#33A1FF"; // Blue color
+        ctx.fill();
+
+        // Draw a line
+        ctx.beginPath();
+        ctx.moveTo(100, 300); // Start point (x, y)
+        ctx.lineTo(400, 300); // End point (x, y)
+        ctx.strokeStyle = "#33FF5B"; // Green color
+        ctx.lineWidth = 5; // Line thickness
+        ctx.stroke();
+    </script>
+
+</body>
+</html>

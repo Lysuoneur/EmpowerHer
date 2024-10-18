@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Media Controls</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+            text-align: center;
+        }
+        h2 {
+            color: #333;
+        }
+        .media-section {
+            margin: 20px 0;
+        }
+        .controls {
+            margin-top: 10px;
+        }
+        button, input[type="range"] {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>My Favorite Hobby: Music</h1>
+
+    <!-- Media Section -->
+    <div class="media-section">
+        <h2>Watch this video about music theory</h2>
+        <video id="myVideo" width="560" height="315" controls>
+            <source src="c:\Users\USER\Videos\Screen Recordings\Screen Recording 2024-08-28 234036.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="controls">
+            <button onclick="playVideo()">Play</button>
+            <button onclick="pauseVideo()">Pause</button>
+            <input type="range" id="videoVolume" min="0" max="1" step="0.1" value="1" onchange="setVideoVolume()">
+        </div>
+    </div>
+
+    <div class="media-section">
+        <h2>Listen to my favorite song</h2>
+        <audio id="myAudio" controls>
+            <source src="c:\Users\USER\Music\U Know VD Visualizer 07.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <div class="controls">
+            <button onclick="playAudio()">Play</button>
+            <button onclick="pauseAudio()">Pause</button>
+            <input type="range" id="audioVolume" min="0" max="1" step="0.1" value="1" onchange="setAudioVolume()">
+        </div>
+    </div>
+
+    <script>
+        // Video Controls
+        const video = document.getElementById('myVideo');
+        function playVideo() {
+            video.play();
+        }
+        function pauseVideo() {
+            video.pause();
+        }
+        function setVideoVolume() {
+            const volume = document.getElementById('videoVolume').value;
+            video.volume = volume;
+        }
+
+        // Audio Controls
+        const audio = document.getElementById('myAudio');
+        function playAudio() {
+            audio.play();
+        }
+        function pauseAudio() {
+            audio.pause();
+        }
+        function setAudioVolume() {
+            const volume = document.getElementById('audioVolume').value;
+            audio.volume = volume;
+        }
+    </script>
+
+</body>
+</html>

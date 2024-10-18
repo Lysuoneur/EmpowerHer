@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Webpage</title>
+    <style>
+        .video-controls, .audio-controls {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+
+        .video-controls button, .audio-controls button {
+            padding: 5px 10px;
+            background-color: #f0f0f0;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h2>Media</h2>
+        <iframe width="560" height="315" src="c:\Users\USER\Videos\Screen Recordings\Screen Recording 2024-08-28 234036.mp4" title=" Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+        <div class="video-controls">
+            <button onclick="playVideo()">Play</button>
+            <button onclick="pauseVideo()">Pause</button>
+        </div>
+
+        <audio controls>
+            <source src="c:\Users\USER\Music\U Know VD Visualizer 07.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <div class="audio-controls">
+            <button onclick="playAudio()">Play</button>
+            <button onclick="pauseAudio()">Pause</button>
+        </div>
+
+        <script>
+            var video = document.querySelector('iframe');
+            var audio = document.querySelector('audio');
+
+            function playVideo() {
+                video.contentWindow.postMessage('play', '*');
+            }
+
+            function pauseVideo() {
+                video.contentWindow.postMessage('pause', '*');
+            }
+
+            function playAudio() {
+                audio.play();
+            }
+
+            function pauseAudio() {
+                audio.pause();
+            }
+        </script>
+    </section>
+</body>
+</html>
