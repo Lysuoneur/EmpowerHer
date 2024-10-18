@@ -1,0 +1,74 @@
+## Task 3: Sass Basics
+
+**Sass** (Syntactically Awesome Style Sheets) is a preprocessor that extends CSS with additional features, such as nesting, variables, mixins, and more. It provides a more flexible and efficient way to write CSS, making it easier to maintain and manage large stylesheets.
+
+**Key differences between Sass and regular CSS:**
+
+* **Nesting:** Sass allows you to nest selectors within each other, improving code organization and readability.
+* **Variables:** You can define variables to store values and reuse them throughout your stylesheet.
+* **Mixins:** Mixins are reusable blocks of code that can be included in other styles.
+* **Functions:** You can create custom functions to perform calculations or manipulate values.
+* **Partials:** Sass allows you to create partial files that can be imported into other files.
+* **Imports:** You can import external CSS files into your Sass files.
+
+**Example:**
+
+```scss
+// Sass file (styles.scss)
+
+$primary-color: blue;
+
+.button {
+    background-color: $primary-color;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@import "utils.scss"; // Import a partial file
+
+.container {
+    @include clearfix; // Use a mixin
+}
+```
+
+**Partials (utils.scss):**
+
+```scss
+@mixin clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+```
+
+**Compiled CSS:**
+
+```css
+.button {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.container:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+```
+
+**Explanation:**
+
+- The Sass file defines a variable `$primary-color` and styles a button element using the variable.
+- The `@import` statement imports the `utils.scss` partial file.
+- The `.container` class uses the `@include clearfix` mixin to add a clearfix hack for clearing floats.
+
+The compiled CSS output shows how the Sass code has been transformed into standard CSS that browsers can understand. The nesting and mixin features make the Sass code more concise and easier to read.

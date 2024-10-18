@@ -1,0 +1,44 @@
+## Task 4: How to Debug CSS
+
+**Common CSS Issues:**
+
+* **Typographical Errors:** Incorrect spelling or syntax can lead to unexpected results.
+* **Selector Specificity Conflicts:** Multiple selectors targeting the same element can cause conflicting styles.
+* **Inheritance Problems:** Styles inherited from parent elements might not be as intended.
+* **Browser Compatibility Issues:** Different browsers may render CSS differently.
+* **Layout Problems:** Incorrect use of display properties, floats, or positioning can cause elements to be misplaced.
+
+**Debugging Techniques:**
+
+1.  **Browser Developer Tools:**
+    - **Inspect Elements:** Right-click on an element and select "Inspect" to view its applied styles, including CSS rules, computed styles, and layout information.
+    - **Console:** Use the console to log values, check for errors, or execute JavaScript commands.
+    - **Style Editor:** Modify styles in real-time and see the immediate effects on the element.
+2.  **CSS Linter:**
+    - Use a linter to automatically detect syntax errors and potential issues in your CSS code.
+3.  **Commenting Out Code:** Temporarily comment out sections of your CSS to isolate the problem.
+4.  **Using a Reset Stylesheet:** Normalize browser defaults to ensure consistent styling across different browsers.
+
+**Example:**
+
+**Problem:** An element is not displaying as expected.
+
+**Debugging Steps:**
+
+1.  **Inspect the element:** Check if the element is being targeted by the correct selector.
+2.  **Check for conflicting styles:** Look for other selectors that might be affecting the element.
+3.  **Verify inheritance:** Ensure that inherited styles are not causing issues.
+4.  **Test in different browsers:** Check if the problem is browser-specific.
+
+**Example CSS Issue:**
+
+```css
+.my-element {
+    display: none;
+    /* Typo: should be "block" */
+}
+```
+
+**Solution:** Correct the typo to `display: block;` to make the element visible.
+
+By following these steps and utilizing browser developer tools, you can effectively debug CSS issues and create well-styled web pages.

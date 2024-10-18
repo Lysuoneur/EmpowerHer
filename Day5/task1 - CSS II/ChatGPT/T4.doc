@@ -1,0 +1,147 @@
+### Using Variables and Functions in Sass
+
+Sass allows developers to define **variables** and **functions** to enhance code maintainability and reusability. Variables in Sass enable you to store values that can be reused throughout your stylesheets, ensuring consistency and making it easier to update styles. Functions allow you to create reusable calculations or operations that can manipulate values.
+
+### Declaring Variables in Sass
+
+You declare a variable in Sass using the `$` symbol followed by the variable name. For example:
+
+```scss
+$primary-color: #3498db;
+$padding: 10px;
+```
+
+### Creating Functions in Sass
+
+Sass allows you to define your own functions to perform operations on values. Functions are declared using the `@function` directive, and they can return a value that can be used in styles. Here’s an example of a simple function that calculates a lighter color:
+
+```scss
+@function lighten($color, $amount) {
+  @return lighten($color, $amount);
+}
+```
+
+### Example: Using Variables and Functions
+
+Here’s a complete example that shows how to use variables and a function to maintain consistency in styles.
+
+#### Example Code
+
+```scss
+// Define variables
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$padding: 10px;
+$border-radius: 5px;
+
+// Define a function to lighten a color
+@function lighten-color($color, $amount) {
+  @return lighten($color, $amount);
+}
+
+// Styles using variables and functions
+.button {
+  background-color: $primary-color;
+  color: white;
+  padding: $padding;
+  border: none;
+  border-radius: $border-radius;
+
+  &:hover {
+    background-color: lighten-color($primary-color, 15%);
+  }
+}
+
+.alert {
+  background-color: $secondary-color;
+  color: white;
+  padding: $padding;
+  border-radius: $border-radius;
+
+  &.warning {
+    background-color: lighten-color($secondary-color, 10%);
+  }
+}
+```
+
+### Compiled CSS Output
+
+After compilation, the above Sass code would produce the following CSS:
+
+```css
+.button {
+  background-color: #3498db;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.button:hover {
+  background-color: #4db8e5; /* lighten(15%) of $primary-color */
+}
+
+.alert {
+  background-color: #2ecc71;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.alert.warning {
+  background-color: #4ed99f; /* lighten(10%) of $secondary-color */
+}
+```
+
+### Concept of Inheritance in Sass
+
+Inheritance in Sass refers to the ability of one selector to inherit styles from another. This is typically achieved using the `@extend` directive, which allows one selector to inherit the styles of another. This promotes code reuse and helps maintain consistency.
+
+#### Example of Inheritance
+
+```scss
+// Base button styles
+.button-base {
+  padding: $padding;
+  border-radius: $border-radius;
+  border: none;
+  color: white;
+}
+
+// Inheriting styles for primary button
+.button-primary {
+  @extend .button-base;
+  background-color: $primary-color;
+}
+
+// Inheriting styles for secondary button
+.button-secondary {
+  @extend .button-base;
+  background-color: $secondary-color;
+}
+```
+
+### Compiled CSS Output for Inheritance
+
+After compiling the inheritance example, the resulting CSS would look like this:
+
+```css
+.button-base {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+}
+
+.button-primary {
+  background-color: #3498db;
+}
+
+.button-secondary {
+  background-color: #2ecc71;
+}
+```
+
+### Conclusion
+
+In Sass, variables and functions greatly enhance the ability to write maintainable and consistent styles. Variables allow you to define reusable values, while functions provide a way to perform calculations or manipulate values dynamically. Inheritance further simplifies code by allowing styles to be shared among selectors, reducing redundancy and ensuring uniformity across stylesheets. This combination of features makes Sass a powerful tool for modern web development.

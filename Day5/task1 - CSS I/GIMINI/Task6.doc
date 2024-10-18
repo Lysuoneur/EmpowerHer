@@ -1,0 +1,57 @@
+## Task 6: Text and Font
+
+**Styling Text and Fonts in CSS**
+
+CSS provides various properties to control the appearance of text and fonts on a web page. Here are some common properties and their uses:
+
+* **font-family:** Specifies the font family to be used.
+* **font-size:** Sets the size of the font.
+* **font-weight:** Defines the boldness of the font (e.g., normal, bold, bolder).
+* **text-align:** Aligns the text within an element (e.g., left, center, right).
+* **color:** Sets the color of the text.
+* **text-decoration:** Applies decorations to text (e.g., underline, line-through).
+* **text-transform:** Changes the capitalization of text (e.g., uppercase, lowercase).
+
+**Example:**
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text and Font Styling</title>
+    <style>
+        h1 {
+            font-family: Arial, sans-serif;
+            font-size: 36px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #666;
+        }
+
+        a {
+            color: blue;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>This is a Heading</h1>
+    <p>This is a paragraph of text.</p>
+    <p>This is another paragraph.</p>
+    <a href="https://example.com">Link to Example</a>
+</body>
+</html>
+```
+
+**Explanation:**
+
+- The `h1` element is styled with Arial font, 36px size, bold weight, and centered alignment.
+- The `p` elements are styled with a font size of 16px, line height of 1.5, and a gray color.
+- The `a` element is styled with blue text and an underline decoration.
+
+By using these properties, you can customize the appearance of text and fonts to match the desired style of your web page.

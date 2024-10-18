@@ -1,0 +1,43 @@
+## Task 2: Compilation
+
+**CSS compilation** is the process of transforming preprocessed CSS (e.g., Sass, LESS) into standard CSS that browsers can interpret. This is necessary because browsers do not understand the additional features and syntax provided by preprocessors.
+
+**How Compilation Works:**
+
+1.  **Write Preprocessed CSS:** Create a CSS file using a preprocessor language like Sass or LESS.
+2.  **Run the Compiler:** Use a compiler tool (e.g., Dart Sass, Lessc) to process the preprocessed CSS file.
+3.  **Generate Standard CSS:** The compiler will convert the preprocessed code into standard CSS that browsers can understand.
+
+**Example (Sass to CSS):**
+
+**Sass Code:**
+
+```scss
+$primary-color: blue;
+
+.button {
+    background-color: $primary-color;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+```
+
+**Compiled CSS:**
+
+```css
+.button {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+```
+
+In this example, the Sass code defines a variable and styles a button element. The compiler converts the Sass code into standard CSS, replacing the variable with its value.
+
+**Note:** The specific compilation process and syntax may vary depending on the preprocessor and compiler you are using. However, the general steps remain the same: write preprocessed CSS, run the compiler, and generate standard CSS.

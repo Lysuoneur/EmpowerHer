@@ -1,0 +1,65 @@
+## Task 8: Theme
+
+**Theming** in CSS refers to the process of creating multiple stylesheets or using variables to change the appearance of a website. This allows users to customize the visual experience based on their preferences.
+
+**Implementing Themes with Sass**
+
+Sass is a powerful tool for creating themes due to its variables and nesting capabilities. By defining variables for colors, fonts, and other styles, you can easily switch between different themes by changing the variable values.
+
+**Example:**
+
+```scss
+// Variables
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$background-color: white;
+$text-color: black;
+
+// Styles
+body {
+    background-color: $background-color;
+    color: $text-color;
+}
+
+.button {
+    background-color: $primary-color;
+    color: white;
+    // ... other styles
+}
+```
+
+**Theme Switcher:**
+
+```html
+<button id="theme-toggle">Toggle Theme</button>
+
+<script>
+    const themeToggle = document.getElementById('theme-toggle');
+
+    themeToggle.addEventListener('click', () => {
+        const root = document.documentElement;
+        root.classList.toggle('dark-theme');
+    });
+</script>
+```
+
+**CSS for Dark Theme:**
+
+```scss
+.dark-theme {
+    --primary-color: #343a40;
+    --secondary-color: #f8f9fa;
+    --background-color: #212529;
+    --text-color: #f8f9fa;
+}
+```
+
+**Explanation:**
+
+1.  **Define variables:** Create Sass variables for the primary color, secondary color, background color, and text color.
+2.  **Apply variables:** Use the variables in your stylesheet to define the appearance of elements.
+3.  **Create a theme switcher:** Add a button or other element to toggle between themes.
+4.  **Use CSS classes:** Add a CSS class (e.g., `dark-theme`) to the root element when the theme is switched.
+5.  **Define theme styles:** Create a CSS rule for the `.dark-theme` class and redefine the variable values for the dark theme.
+
+By using this approach, you can easily create multiple themes for your website and allow users to switch between them.

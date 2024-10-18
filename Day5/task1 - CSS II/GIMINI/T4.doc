@@ -1,0 +1,64 @@
+## Task 4: Variables, Functions, and Inheritance
+
+**Variables**
+
+Sass variables allow you to store values that can be reused throughout your stylesheet. This makes it easier to maintain consistency and make global changes.
+
+**Example:**
+
+```scss
+$primary-color: blue;
+
+.button {
+    background-color: $primary-color;
+    color: white;
+    // ... other styles
+}
+```
+
+**Functions**
+
+Sass functions allow you to create custom functions that perform calculations or manipulate values. This can help you write more concise and reusable code.
+
+**Example:**
+
+```scss
+@function lighten($color, $amount) {
+    @return rgba($color, 1 - $amount);
+}
+
+.button {
+    background-color: lighten($primary-color, 0.2);
+}
+```
+
+**Inheritance**
+
+Sass supports inheritance through mixins and extends. Mixins allow you to include a block of CSS code in multiple places, while extends allow you to create new selectors based on existing ones.
+
+**Example:**
+
+```scss
+%base-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.primary-button {
+    @extend %base-button;
+    background-color: $primary-color;
+    color: white;
+}
+
+.secondary-button {
+    @extend %base-button;
+    background-color: $secondary-color;
+    color: black;
+}
+```
+
+**Conclusion:**
+
+By using variables, functions, and inheritance, you can write more efficient, maintainable, and reusable Sass code. These features help you create consistent and scalable stylesheets for your web projects.

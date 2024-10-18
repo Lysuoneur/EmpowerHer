@@ -1,0 +1,64 @@
+## Task 9: Alignment and Display
+
+**CSS Alignment**
+
+CSS provides properties to control the alignment of elements both horizontally and vertically.
+
+* **Horizontal Alignment:**
+    - `text-align`: Aligns the text within an element (left, center, right, justify).
+    - `margin-left`, `margin-right`: Adjusts the left and right margins of an element.
+    - `padding-left`, `padding-right`: Adjusts the internal padding on the left and right sides of an element.
+
+* **Vertical Alignment:**
+    - `vertical-align`: Aligns the content within an element (top, middle, bottom).
+    - `margin-top`, `margin-bottom`: Adjusts the top and bottom margins of an element.
+    - `padding-top`, `padding-bottom`: Adjusts the internal padding on the top and bottom sides of an element.
+
+**CSS Display Properties**
+
+The `display` property determines how an element is displayed on the page. Common values include:
+
+* **block:** Element is displayed as a block, taking up the full width of its container and starting on a new line.
+* **inline:** Element is displayed inline, without starting on a new line.
+* **inline-block:** Element is displayed as a block, but without starting on a new line.
+* **flex:** Element is part of a flex container, allowing for flexible layout.
+
+**Example:**
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Alignment and Display</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .item {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+</body>
+</html>
+```
+
+**Explanation:**
+
+- The `.container` element is set to `display: flex` to create a flex container.
+- The `justify-content: space-between` property distributes the items evenly within the container with spaces between them.
+- The `align-items: center` property vertically aligns the items in the center of the container.
+- The `.item` elements are styled with centered text alignment, padding, and a border.
+
+By combining these alignment techniques and display properties, you can create various layouts and positions for elements on your web page.

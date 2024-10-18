@@ -1,0 +1,93 @@
+## Task 6: Components
+
+**Components** in CSS are reusable sections of code that can be applied to multiple elements on a web page. They help to improve code organization, maintainability, and consistency.
+
+**Benefits of using components:**
+
+* **Code Reusability:** Avoids duplication of styles and improves maintainability.
+* **Consistency:** Ensures a consistent look and feel across your website.
+* **Modularity:** Breaks down your stylesheet into smaller, more manageable parts.
+
+**Creating a Card Component with Sass:**
+
+```scss
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    .card-image {
+        width: 100%;
+        height: 200px;
+    }
+
+    .card-title {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .card-description {
+        font-size: 14px;
+        color: #666;
+    }
+
+    .card-button {
+        display: block;
+        text-align: center;
+        padding: 10px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}
+```
+
+**Compiled CSS:**
+
+```css
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card .card-image {
+    width: 100%;
+    height: 200px;
+}
+
+.card .card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card .card-description {
+    font-size: 14px;
+    color: #666;
+}
+
+.card .card-button {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+```
+
+**Structuring Components in a Sass Project:**
+
+- **Create a separate folder** for your components (e.g., `components/`).
+- **Create individual Sass files** for each component (e.g., `card.scss`).
+- **Import** the component files into your main stylesheet.
+
+By organizing your styles into components, you can improve code reusability and maintainability, especially for large-scale projects.
